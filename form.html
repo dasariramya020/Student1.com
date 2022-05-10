@@ -137,44 +137,79 @@
           var idx = selectObj.selectedIndex; 
         // get the value of the selected option 
           var which = selectObj.options[idx].value;
-          if(which=="sub1")
+          switch(which)
           {
-             const scriptURL = 'https://script.google.com/macros/s/AKfycbzLMrU3FuBIKW0uoCZUjigNpnektyw5V3cQpK11dYlctsd9-fSxp_kyHhTk3eMuDyLRsg/exec'
+              case "sub1":
+                     if(which=="sub1")
+                     {
+                       const scriptURL = 'https://script.google.com/macros/s/AKfycbzLMrU3FuBIKW0uoCZUjigNpnektyw5V3cQpK11dYlctsd9-fSxp_kyHhTk3eMuDyLRsg/exec'
+                     const form = document.forms['google-sheet']
+  
+                 form.addEventListener('submit', e => {
+                e.preventDefault()
+                fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                    })
+                }
+               break;
+              case "sub2":
+              if(which=="sub2")
+                  {
+              const scriptURL= 'https://script.google.com/macros/s/AKfycbzLmhssqylyVg2HntoDZOE9EiyO9H5vdTQXfvyiDKKwumgejjj0IXv-zmYxN96L2tPs/exec'
               const form = document.forms['google-sheet']
   
                form.addEventListener('submit', e => {
                 e.preventDefault()
                 fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-    })
-          }
-          else 
-          {
-            if(which="sub2")
-            {
-             const scriptURL = 'https://script.google.com/macros/s/AKfycbzLmhssqylyVg2HntoDZOE9EiyO9H5vdTQXfvyiDKKwumgejjj0IXv-zmYxN96L2tPs/exec'
-              const form = document.forms['google-sheet']
-  
-               form.addEventListener('submit', e => {
-                e.preventDefault()
-                fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-           })
-          }
-          else 
-          {
-            if(which="sub3")
-            {
-             const scriptURL ='https://script.google.com/macros/s/AKfycbyB3rugqKAtttsqJeIdXw1LSHX7JwL31v5LtfGbqMihPCxMLFCTniV7sNEgXYH01plB/exec'
-              const form = document.forms['google-sheet']
-  
-               form.addEventListener('submit', e => {
-                e.preventDefault()
-                fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-           })
-          }
-         
-        }
-        }
+                  })
+                }
+                  break;
 
+                  case "sub3":
+                      {
+                  const scriptURL2 = 'https://script.google.com/macros/s/AKfycbyB3rugqKAtttsqJeIdXw1LSHX7JwL31v5LtfGbqMihPCxMLFCTniV7sNEgXYH01plB/exec'
+              const form2 = document.forms['google-sheet']
+  
+               form2.addEventListener('submit', e => {
+                e.preventDefault()
+                fetch(scriptURL2, { method: 'POST', body: new FormData(form2)})
+           })
+        }
+                  break;
+                  case "sub4":
+                      {
+                  const scriptURL3 = 'https://script.google.com/macros/s/AKfycbz9BZwWReikO5U6r3Kb8bKHiBQTWiQz1Z3S4-YrEinQNCF8MXNlqSQ0s6pvF3-z68TY/exec'
+              const form3 = document.forms['google-sheet']
+  
+               form3.addEventListener('submit', e => {
+                e.preventDefault()
+                fetch(scriptURL3, { method: 'POST', body: new FormData(form3)})
+           })
+        }
+                  break;
+                  case "sub5":
+                      {
+                  const scriptURL4 = 'https://script.google.com/macros/s/AKfycbzkF1yi-HSt32KZDBwG79T5CGQMsWJeYFB6EHKxhVF08EngOUrcYbcti8YqsuB2s1x6/exec'
+              const form4 = document.forms['google-sheet']
+  
+               form4.addEventListener('submit', e => {
+                e.preventDefault()
+                fetch(scriptURL4, { method: 'POST', body: new FormData(form4)})
+           })
+        }
+                  break;
+                  case "sub6":
+                      {
+                  const scriptURL5 = 'https://script.google.com/macros/s/AKfycbyyDtATWXREy9pPxIPphX_bObv71a25PbvKDF9dSMrd_0x2aPYDmoZ21F2zBp4Oz3gn/exec'
+              const form5 = document.forms['google-sheet']
+  
+               form5.addEventListener('submit', e => {
+                e.preventDefault()
+                fetch(scriptURL5, { method: 'POST', body: new FormData(form5)})
+           })
+        }
+                  break;
+          }
+        
     }
 </script>
 </body>
